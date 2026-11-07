@@ -1,0 +1,759 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="de VYBE CODE STUDIO - Music production, recording, mixing, mastering and beats by Producer Richie Pan and Producer Simson.">
+  <meta name="theme-color" content="#100d19">
+  <title>DE VYBEZ CORD STUDIO | Music Production</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #100d19;
+      color: #ffffff;
+      line-height: 1.7;
+    }
+
+    :root {
+      --gold: #ffbd39;
+      --purple: #a855f7;
+      --dark: #100d19;
+      --card: #1c1728;
+    }
+
+    header {
+      background: #171222;
+      padding: 16px 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 15px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #393047;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 21px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: white;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 540px;
+      padding: 80px 7%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(16,13,25,.98),
+        rgba(16,13,25,.72)),
+        url("images/studio.jpg") center/cover;
+    }
+
+    .hero-content {
+      max-width: 750px;
+    }
+
+    .tag {
+      color: var(--gold);
+      font-weight: bold;
+      letter-spacing: 3px;
+      font-size: 13px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 7vw, 66px);
+      line-height: 1.15;
+      margin: 18px 0;
+    }
+
+    h1 span {
+      color: var(--gold);
+    }
+
+    .hero p {
+      max-width: 600px;
+      color: #ddd6e9;
+      margin-bottom: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: var(--gold);
+      color: #18111e;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 7px;
+      font-weight: bold;
+      border: none;
+      cursor: pointer;
+      margin: 5px 5px 5px 0;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+    }
+
+    section {
+      padding: 65px 6%;
+      scroll-margin-top: 20px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      margin-bottom: 8px;
+    }
+
+    .section-title p {
+      color: #c4bbd3;
+    }
+
+    .gold {
+      color: var(--gold);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid #393047;
+      border-radius: 12px;
+      padding: 24px;
+      overflow-wrap: anywhere;
+    }
+
+    .card h3 {
+      color: var(--gold);
+      margin: 10px 0;
+    }
+
+    .card p {
+      color: #d1c9dd;
+    }
+
+    .emoji {
+      font-size: 40px;
+    }
+
+    .producer-image {
+      width: 100%;
+      height: 500px;
+      object-fit: cover;
+      border-radius: 10px;
+      background: #30243e;
+    }
+
+    .services-list {
+      padding-left: 20px;
+      color: #ddd6e9;
+    }
+
+    .beat {
+      margin-bottom: 18px;
+    }
+
+    audio, video {
+      width: 100%;
+      margin-top: 12px;
+      border-radius: 8px;
+    }
+
+    .video-placeholder {
+      width: 100%;
+      background: #09070d;
+      border-radius: 8px;
+      padding: 8px;
+    }
+
+    .about {
+      background: #171222;
+    }
+
+    .two-columns {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      align-items: center;
+    }
+
+    .studio-photo {
+      width: 100%;
+      border-radius: 12px;
+      max-height: 400px;
+      object-fit: cover;
+      background: #30243e;
+    }
+
+    form {
+      max-width: 650px;
+      margin: auto;
+      background: var(--card);
+      padding: 25px;
+      border-radius: 12px;
+      border: 1px solid #393047;
+    }
+
+    label {
+      display: block;
+      margin: 12px 0 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #51465e;
+      background: #100d19;
+      color: white;
+      border-radius: 6px;
+      font: inherit;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: 2px solid var(--gold);
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    .contact-links a {
+      color: var(--gold);
+      overflow-wrap: anywhere;
+    }
+
+    .socials {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 18px;
+    }
+
+    footer {
+      background: #09070d;
+      padding: 30px 6%;
+      text-align: center;
+      color: #c4bbd3;
+    }
+
+    footer a {
+      color: var(--gold);
+      text-decoration: none;
+    }
+
+    #form-message {
+      margin-top: 15px;
+      color: var(--gold);
+    }
+
+    @media (max-width: 600px) {
+      header {
+        justify-content: center;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 10px 14px;
+      }
+
+      .hero {
+        padding: 65px 6%;
+        min-height: 460px;
+      }
+
+      section {
+        padding: 48px 5%;
+      }
+
+      .section-title h2 {
+        font-size: 27px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER AND NAVIGATION -->
+  <header>
+    <div class="logo">🎙️ DE VYBEZ <span>CORD STUDIO</span></div>
+
+    <nav aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#producers">Producers</a>
+      <a href="#services">Services</a>
+      <a href="#beats">Beats</a>
+      <a href="#videos">Videos</a>
+      <a href="#booking">Booking</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HOME -->
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <div class="tag">SOUND • CREATIVITY • CULTURE</div>
+
+        <h1>
+          WELCOME TO<br>
+          DE VYBEZ <span>CORD STUDIO</span>
+        </h1>
+
+        <p>
+          Your sound, your identity, your vibe.
+          Discover original beats, professional recording,
+          mixing, mastering and creative music production
+          with Producer Richie Pan and Producer Simson.
+        </p>
+
+        <a href="#beats" class="btn">🎧 Listen to Beats</a>
+        <a href="#booking" class="btn btn-outline">📅 Book Studio</a>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+      <div class="two-columns">
+        <div>
+          <p class="tag">OUR STUDIO</p>
+          <h2>Music That <span class="gold">Moves You</span></h2>
+
+          <p>
+            DE VYBE CORD STUDIO is a creative music production
+            brand built around sound, originality and talent.
+            We work with artists who want to develop their
+            musical ideas into complete songs.
+          </p>
+
+          <p>
+            From beat creation to recording, vocal arrangement,
+            mixing and mastering, our goal is to help artists
+            express their unique sound.
+          </p>
+
+          <a href="#services" class="btn">Explore Services</a>
+        </div>
+
+        <div>
+          <img
+            class="studio-photo"
+            src="images/studio.jpg"
+            alt="Music production studio"
+            onerror="this.style.display='none'">
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCERS -->
+    <section id="producers">
+      <div class="section-title">
+        <p class="tag">MEET THE TEAM</p>
+        <h2>Our <span class="gold">Producers</span></h2>
+        <p>Creative minds behind the sound.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <img
+            class="producer-image"
+            src="images/5.jpg"width="69"height="987"
+            alt="Producer Richie Pan"
+            onerror="this.style.display='none'">
+
+          <h3>🎹 Producer Richie Pan</h3>
+          <p>
+            Music producer and creative collaborator.
+            Specializing in beat development, song arrangement
+            and helping artists bring musical ideas to life.
+          </p>
+          <p><strong>Role:</strong> Music production and arrangement</p>
+        </article>
+
+        <article class="card">
+          <img
+            class="producer-image"
+            src="images/1.jpg"width="500"height="1"
+            alt="Producer Simson"
+            onerror="this.style.display='3'">
+
+          <h3>🎧 Producer Simson</h3>
+          <p>
+            Producer Simson brings creative energy to beat
+            making, rhythm, sound design and music production.
+            Building a distinctive sound for every project.
+          </p>
+          <p><strong>Role:</strong> Beat making and sound production</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="about">
+      <div class="section-title">
+        <p class="tag">WHAT WE OFFER</p>
+        <h2>Studio <span class="gold">Services</span></h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="emoji">🎙️</div>
+          <h3>Vocal Recording</h3>
+          <p>Record vocals for songs, demos and music projects.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">🥁</div>
+          <h3>Beat Production</h3>
+          <p>Original instrumentals, drum patterns, melodies and rhythms.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">🎚️</div>
+          <h3>Mixing</h3>
+          <p>Balance vocals and instruments for a clearer sound.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">🔊</div>
+          <h3>Mastering</h3>
+          <p>Final audio polishing for music release preparation.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">🎼</div>
+          <h3>Song Arrangement</h3>
+          <p>Organize intros, verses, choruses, bridges and outros.</p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">📹</div>
+          <h3>Music Content</h3>
+          <p>Support for promotional audio, studio clips and music videos.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BEAT GALLERY -->
+    <section id="beats">
+      <div class="section-title">
+        <p class="tag">LISTEN TO OUR WORK</p>
+        <h2>Beat <span class="gold">Gallery</span></h2>
+        <p>Replace the sample audio with your own original beats.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card beat">
+          <div class="emoji">🔥</div>
+          <h3>Lakubukubu Beat</h3>
+          <p>Producer Simson — add your original instrumental.</p>
+          <audio controls preload="metadata">
+            <source src="audio/Coo_Degi_Snob_Dee___._official_music_audio_.(256k).mp3" type="audio/mpeg">
+            Your browser does not support audio.
+          </audio>
+        </article>
+
+        <article class="card beat">
+          <div class="emoji">🎹</div>
+          <h3>Afrobeat Instrumental</h3>
+          <p>Producer Richie Pan — add your original instrumental.</p>
+          <audio controls preload="metadata">
+            <source src="audio/afrobeat.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+          </audio>
+        </article>
+
+        <article class="card beat">
+          <div class="emoji">🎶</div>
+          <h3>Dancehall Instrumental</h3>
+          <p>DE VYBEZ CORD STUDIO — add your original instrumental.</p>
+          <audio controls preload="metadata">
+            <source src="audio/dancehall.mp3" type="audio/mpeg">
+            Your browser does not support audio.
+          </audio>
+        </article>
+      </div>
+
+      <p style="text-align:center; margin-top:20px; color:#d1c9dd">
+        Contact the studio for beat licensing, custom beats and collaborations.
+      </p>
+    </section>
+
+    <!-- VIDEO GALLERY -->
+    <section id="videos" class="about">
+      <div class="section-title">
+        <p class="tag">BEHIND THE MUSIC</p>
+        <h2>Studio <span class="gold">Videos</span></h2>
+        <p>Showcase studio sessions, beat-making and artist performances.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Studio Session</h3>
+          <video controls preload="metadata" poster="images/studio.jpg">
+            <source src="video/PLAN B Official Video BY WINNIE WINZAH DPK ENT Ceaser Deyopakaka-1080.mp4" type="video/mp4">
+            Your browser does not support video.
+          </video>
+          <p>Add your studio recording video.</p>
+        </article>
+
+        <article class="card">
+          <h3>Beat Making Session</h3>
+          <video controls preload="metadata">
+            <source src="videos/beat-making.mp4" type="video/mp4">
+            Your browser does not support video.
+          </video>
+          <p>Show how Richie Pan and Simson create music.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section id="booking">
+      <div class="section-title">
+        <p class="tag">LET'S CREATE MUSIC</p>
+        <h2>Book a <span class="gold">Session</span></h2>
+        <p>Complete the form with your project details.</p>
+      </div>
+
+      <form id="booking-form">
+        <label for="name">Artist's full name *</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          required
+          minlength="2"
+          placeholder="Enter your name">
+
+        <label for="phone">Phone number *</label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          required
+          placeholder="Enter your phone number">
+
+        <label for="email">Email address</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="you@example.com">
+
+        <label for="service">Choose a service *</label>
+        <select id="service" name="service" required>
+          <option value="">-- Select a service --</option>
+          <option>Vocal Recording</option>
+          <option>Beat Production</option>
+          <option>Mixing</option>
+          <option>Mastering</option>
+          <option>Song Arrangement</option>
+          <option>Music Collaboration</option>
+        </select>
+
+        <label for="producer">Preferred producer</label>
+        <select id="producer" name="producer">
+          <option value="">Any producer</option>
+          <option>Producer Richie Pan</option>
+          <option>Producer Simson</option>
+          <option>Both producers</option>
+        </select>
+
+        <label for="date">Preferred session date</label>
+        <input type="date" id="date" name="date">
+
+        <label for="budget">Budget (UGX)</label>
+        <input
+          type="number"
+          id="budget"
+          name="budget"
+          min="0"
+          placeholder="Enter your budget">
+
+        <label for="details">Describe your project *</label>
+        <textarea
+          id="details"
+          name="details"
+          rows="5"
+          required
+          minlength="5"
+          placeholder="Tell us about your song or project"></textarea>
+
+        <label>
+          <input
+            type="checkbox"
+            id="agree"
+            required
+            style="width:auto">
+          I confirm that my booking details are correct.
+        </label>
+
+        <button class="btn" type="submit">Prepare Booking on WhatsApp</button>
+
+        <p id="form-message" role="status"></p>
+      </form>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="about">
+      <div class="section-title">
+        <p class="tag">GET IN TOUCH</p>
+        <h2>Contact <span class="gold">Our Studio</span></h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <div class="emoji">📱</div>
+          <h3>Phone / WhatsApp</h3>
+          <p>Contact us to discuss bookings and music projects.</p>
+          <p class="contact-links">
+            <a href="#booking">Send a booking request</a>
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">📧</div>
+          <h3>Email</h3>
+          <p>For business, collaborations and enquiries.</p>
+          <p><a href="mailto:YOUR-EMAIL@example.com">
+            DeVybzCordStudio232@gmail.com
+          </a></p>
+        </article>
+
+        <article class="card">
+          <div class="emoji">📍</div>
+          <h3>Studio Location</h3>
+          <p>KITGUM MUNICIPALITY.</p>
+        </article>
+      </div>
+
+      <div class="section-title" style="margin-top:35px">
+        <h3>Follow Our Music Journey</h3>
+
+        <div class="socials" style="justify-content:center">
+          <!-- Replace # with your real profile URLs -->
+          <a class="btn" href="https://www.facebook.com/"
+             target="_blank" rel="noopener noreferrer">
+            Facebook
+          </a>
+
+          <a class="btn" href="https://www.instagram.com/"
+             target="_blank" rel="noopener noreferrer">
+            Instagram
+          </a>
+
+          <a class="btn" href="https://www.youtube.com/"
+             target="_blank" rel="noopener noreferrer">
+            YouTube
+          </a>
+
+          <a class="btn" href="https://www.tiktok.com/"
+             target="_blank" rel="noopener noreferrer">
+            TikTok
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>🎙️ <strong>de VYBE CODE STUDIO</strong></p>
+    <p>Producer Richie Pan • Producer Simson</p>
+    <p>Sound • Creativity • Culture</p>
+    <p>
+      &copy; <span id="year"></span> de VYBE CODE STUDIO.
+      All rights reserved.
+    </p>
+    <p><a href="#home">Back to top ↑</a></p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+
+    document.getElementById("booking-form").addEventListener(
+      "submit", function(event) {
+        event.preventDefault();
+
+        if (!this.reportValidity()) return;
+
+        const studioWhatsApp = ""; 
+        // Add the studio WhatsApp number with country code,
+        /: 2567XXXXXXXX.
+
+        if (!studioWhatsApp) {
+          document.getElementById("form-message").textContent =
+            "Demo form: add your studio WhatsApp number in the code to send bookings.";
+          return;
+        }
+
+        const data = new FormData(this);
+
+        const message =
+          "de VYBE CODE STUDIO - BOOKING REQUEST\n\n" +
+          "Name: " + data.get("name") + "\n" +
+          "Phone: " + data.get("phone") + "\n" +
+          "Email: " + (data.get("email") || "Not provided") + "\n" +
+          "Service: " + data.get("service") + "\n" +
+          "Producer: " + (data.get("producer") || "Any producer") + "\n" +
+          "Date: " + (data.get("date") || "Not specified") + "\n" +
+          "Budget UGX: " + (data.get("budget") || "Not specified") + "\n" +
+          "Project: " + data.get("details");
+
+        const url = "https://wa.me/" + studioWhatsApp +256781605950
+          "?text=" + encodeURIComponent(message);
+
+        window.open(url, "_blank", "noopener,noreferrer");
+      }
+    );
+  </script>
+
+</body>
+</html>
+
+
+
